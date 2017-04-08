@@ -13,21 +13,18 @@ Peng Yan <Peng.Yan@windriver.com>, Security testing leader
 
 [Shim binary information]
 File name: shimx64.efi
-Version: 0.9.0+9f2c83e60e0758c3db387eebaed3f306ad6214a8
-Uefi submission ID: 1945746
+Version: 0fe4a80e9cb9f02ecbb1cebb73331011e3641ff4
+Uefi submission ID: 1953365
 Build machine: Fedora 24 (64-bit)
-Toolchain version: 
-  - gcc 5.2.0
-  - binutils 2.25.1 
+Toolchain version (based on Yocto):
+  - gcc 6.3.0
+  - binutils 2.28
   - gnu-efi 3.0.3
-Build instruction:
-$ make
 
 [Patches applied]
 See patch directory for the details.
 
-Patch 1,3,4,5,6,9 will be submitted to the upstream.
-Patch 7,8,10,11 are dedicated for Pulsar Linux 8 build environment so they
+Note:
+- Patch 1,2,3,4,5,8,11 will be submitted to the upstream.
+- Patch 9,10 are dedicated for Pulsar Linux build environment so they
 won't be submitted.
-
-PS: Patch 2 is reverted in internal code tree.

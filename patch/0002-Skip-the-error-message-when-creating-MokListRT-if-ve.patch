@@ -1,7 +1,7 @@
-From de3da2586006146b21f8a1067afd24dede726ad8 Mon Sep 17 00:00:00 2001
+From 5c922c31b8a63a83837899bb78028470408e9ade Mon Sep 17 00:00:00 2001
 From: Lans Zhang <jia.zhang@windriver.com>
 Date: Wed, 11 Nov 2015 17:11:43 +0800
-Subject: [PATCH 03/11] Skip the error message when creating MokListRT if
+Subject: [PATCH 02/11] Skip the error message when creating MokListRT if
  vendor cert is empty
 
 Upstream-Status: Pending
@@ -15,10 +15,10 @@ Signed-off-by: Lans Zhang <jia.zhang@windriver.com>
  1 file changed, 9 insertions(+), 7 deletions(-)
 
 diff --git a/shim.c b/shim.c
-index 220dd6e..a5e6241 100644
+index 9157ca7..364784b 100644
 --- a/shim.c
 +++ b/shim.c
-@@ -1993,13 +1993,15 @@ EFI_STATUS mirror_mok_list()
+@@ -2000,13 +2000,15 @@ EFI_STATUS mirror_mok_list()
  		FullData = Data;
  	}
  
@@ -29,7 +29,7 @@ index 220dd6e..a5e6241 100644
 -				       FullDataSize, FullData);
 -	if (efi_status != EFI_SUCCESS) {
 -		perror(L"Failed to set MokListRT: %r\n", efi_status);
-+	if (DataSize) {
++	if (FullDataSize) {
 +		efi_status = uefi_call_wrapper(RT->SetVariable, 5, L"MokListRT",
 +					       &shim_lock_guid,
 +					       EFI_VARIABLE_BOOTSERVICE_ACCESS
@@ -42,5 +42,5 @@ index 220dd6e..a5e6241 100644
  
  	return efi_status;
 -- 
-2.7.4
+2.11.0
 

@@ -1,7 +1,7 @@
-From ee55a51c08c0d087a6cebaf1ca61445781a9d37b Mon Sep 17 00:00:00 2001
+From 04da6c928d5f15b7adb6c51e55b9aa0a8126063d Mon Sep 17 00:00:00 2001
 From: Lans Zhang <jia.zhang@windriver.com>
 Date: Wed, 21 Sep 2016 11:31:02 +0800
-Subject: [PATCH 08/11] Use sbsign to sign MokManager and fallback
+Subject: [PATCH 07/11] Use sbsign to sign MokManager and fallback
 
 Upstream-Status: Pending
 
@@ -17,7 +17,7 @@ Signed-off-by: Lans Zhang <jia.zhang@windriver.com>
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index 4942a3d..115e6f5 100644
+index 7c71993..58b4b4c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -12,6 +12,7 @@ HEXDUMP		?= hexdump
@@ -40,5 +40,5 @@ index 4942a3d..115e6f5 100644
  clean:
  	$(MAKE) -C Cryptlib clean
 -- 
-2.7.4
+2.11.0
 
