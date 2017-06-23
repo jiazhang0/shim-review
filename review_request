@@ -13,8 +13,8 @@ Peng Yan <Peng.Yan@windriver.com>, Security testing leader
 
 [Shim binary information]
 File name: shimx64.efi
-Version: 55c65546e46a78edbe41e88cb4ccbd2522e09625
-Uefi submission ID: 1959211
+Version: 919c17a45fe722dcc2b9bdaba538c738f97f88cd
+Uefi submission ID: 1960860
 Build machine: Fedora 24 (64-bit)
 Toolchain version (based on Yocto):
   - gcc 6.3.1
@@ -25,10 +25,6 @@ Toolchain version (based on Yocto):
 See patch directory for the details.
 
 Notes:
-- Patch 2,3 are dedicated for Pulsar Linux build environment so they
+- Patch 1,2,4 are dedicated for Pulsar Linux build environment so they
 won't be submitted.
-- Patch 1 is also dedicated for Pulsar Linux because the EV certificate
-issued by the authority "WoSign" uses SHA-1 for the signature algorithm.
-We already urged WoSign to issue a new EV certificate using SHA-256 and
-will purchase it after current EV certificate expires.
-
+- Patch 3 was submitted to upstream.
