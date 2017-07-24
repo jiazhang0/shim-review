@@ -1,7 +1,7 @@
-From 398e884e9588fb1081f6cdf115a6c654480380b9 Mon Sep 17 00:00:00 2001
+From 46e9ebbbe25d5381059dcb2335d286b47fa0a628 Mon Sep 17 00:00:00 2001
 From: Lans Zhang <jia.zhang@windriver.com>
 Date: Wed, 21 Sep 2016 11:31:02 +0800
-Subject: [PATCH 1/4] Use sbsign to sign MokManager and fallback
+Subject: [PATCH 1/2] Use sbsign to sign MokManager and fallback
 
 Upstream-Status: Pending
 

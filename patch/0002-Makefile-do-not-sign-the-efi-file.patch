@@ -1,7 +1,7 @@
-From f43bada653fd815d597ce7f6bfe6f81c97868649 Mon Sep 17 00:00:00 2001
+From a64f71fc097f2762d384526d17169b9a0c8e565d Mon Sep 17 00:00:00 2001
 From: Yunguo Wei <yunguo.wei@windriver.com>
 Date: Wed, 28 Dec 2016 11:08:37 +0800
-Subject: [PATCH 2/4] Makefile: do not sign the efi file
+Subject: [PATCH 2/2] Makefile: do not sign the efi file
 
 Shim tries to sign all the efi binaries at build time, but is not
 suitable for us. Because the private key has to be supplied, and this
